@@ -1,35 +1,25 @@
-import mongoose from 'mongoose'
+import { ObjectId } from 'mongodb'
+import * as url from 'url'
 
-const cameraSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    ip: {
-        type: String,
-        required: true,
-    },
-    port: {
-        type: Number,
-        required: true,
-    },
-    username: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
 
-    webSocketPort: {
-        type: Number,
-        required: true,
-    },
-    rtsp: {
-        type: String,
-        required: true,
-    },
-})
+export interface CameraInterface {
+    urn: string;
+    name: string;
+    hardware: string;
+    location: string;
+    typecam: string;
+    xaddrs: string;
+}
 
-export default mongoose.model('Camera', cameraSchema)
+export class Camera {
+    constructor(
+        public urn: string,
+        public name: string,
+        public hardware: string,
+        public location: string,
+        public typecam: string,
+        public xaddrs: string,
+    ) {
+
+    }
+}
