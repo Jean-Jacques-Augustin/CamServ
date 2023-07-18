@@ -16,7 +16,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^4.13.0",
-    "mongoose": "^6.8.3",
+    "mongoose": "^6.11.3",
     "node-onvif": "^0.1.7",
     "node-onvif-ts": "^0.1.7",
     "node-rtsp-stream": "^0.0.9",
